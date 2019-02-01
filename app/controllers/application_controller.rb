@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
   
   def hello 
    if session[:name].present?
+     redirect_to "/application/hello"
    else 
+     redirect_to "/sessions/new"
    end 
   end 
   
