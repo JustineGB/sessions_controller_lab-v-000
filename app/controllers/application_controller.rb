@@ -13,7 +13,11 @@ class ApplicationController < ActionController::Base
   # end 
   
   def logged_in?
-    session[:name]
+    if !session[:name].present?
+      redirect_to "/login"
+    else 
+      redirect_to :root 
+    end 
   end 
   
 end
