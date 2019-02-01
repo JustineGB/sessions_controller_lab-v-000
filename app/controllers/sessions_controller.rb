@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     #binding.pry
     if !params[:name].present?
-      redirect_to '/login'
+      redirect_to '/sessions/new'
     else session[:name] = params[:name]
       redirect_to '/'    
     end
