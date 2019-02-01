@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def hello 
-    puts hi 165.227.31.156:56139
+    puts "hi"
   end 
   
 end
